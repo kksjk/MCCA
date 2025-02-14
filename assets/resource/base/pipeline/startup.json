@@ -1,149 +1,159 @@
 {
-    "进入首页": {
-        "next": [
-            "首页标志2",
-            "子任务_点击首页按钮",
-            "子任务_点击返回",
-            "子任务_获得物品",
-            "子任务_点击取消",
-            "子任务_点击确认",
-            "子任务_关闭公告",
-            "关闭周年弹窗",
-            "签到",
-            "首页标志1",
-            "开始游戏",
-            "NERI",
-            "启动游戏"
-        ]
-    },
-    "NERI": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/NERI.png",
-        "roi": [
-            325,
-            214,
-            662,
-            354
-        ],
-        "next": [
-            "下载资源",
-            "开始游戏",
-            "NERI"
-        ]
-    },
-    "下载资源": {
-        "recognition": "OCR",
-        "expected": [
-            "下载"
-        ],
-        "roi": [
-            859,
-            645,
-            78,
-            54
-        ],
-        "next": [
-            "开始游戏",
-            "下载资源"
-        ]
-    },
-    "开始游戏": {
-        "recognition": "OCR",
-        "expected": [
-            "开始游戏"
-        ],
-        "roi": [
-            580,
-            462,
-            121,
-            40
-        ],
-        "action": "Click",
-        "next": [
-            "首页标志1",
-            "子任务_关闭公告",
-            "关闭周年弹窗",
-            "签到",
-            "开始游戏"
-        ]
-    },
-    "签到": {
-        "recognition": "OCR",
-        "expected": [
-            "签到"
-        ],
-        "roi": [
-            1053,
-            554,
-            211,
-            105
-        ],
-        "action": "Click",
-        "next": [
-            "首页标志1",
-            "子任务_点击首页按钮",
-            "子任务_点击返回",
-            "子任务_获得物品",
-            "子任务_点击取消",
-            "子任务_关闭公告",
-            "签到"
-        ]
-    },
-    "首页标志1": {
-        "recognition": "OCR",
-        "expected": [
-            "补给站"
-        ],
-        "roi": [
-            885,
-            451,
-            240,
-            139
-        ],
-        "post_delay": 1000,
-        "next": [
-            "子任务_点击首页按钮",
-            "子任务_点击返回",
-            "子任务_获得物品",
-            "子任务_点击取消",
-            "子任务_关闭公告",
-            "签到",
-            "首页标志2",
-            "首页标志1"
-        ]
-    },
-    "首页标志2": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/HomeFlag1.png",
-        "roi": [
-            327,
-            409,
-            55,
-            200
-        ],
-        "action": "Click",
-        "target": [
-            620,
-            350,
-            20,
-            20
-        ]
-    },
-    "启动游戏": {
-        "is_sub": true,
-        "action": "StartApp",
-        "package": "com.megagame.crosscore/com.megagame.crosscore.extend.PhoneUtilActivity"
-    },
-    "关闭周年弹窗": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/CloseOneYear.png",
-        "roi": [
-            1143,
-            118,
-            36,
-            41
-        ],
-        "action": "Click",
-        "green_mask": true
-    }
+  "进入首页": {
+    "next": [
+      "首页标志2",
+      "子任务_点击首页按钮",
+      "子任务_点击返回",
+      "子任务_获得物品",
+      "子任务_点击取消",
+      "子任务_点击确认",
+      "子任务_关闭公告",
+      "关闭周年弹窗",
+      "签到",
+      "首页标志1",
+      "开始游戏",
+      "NERI",
+      "启动游戏"
+    ]
+  },
+  "NERI": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "下载资源",
+      "开始游戏",
+      "NERI"
+    ],
+    "roi": [
+      325,
+      214,
+      662,
+      354
+    ],
+    "template": [
+      "StartUp/NERI.png"
+    ]
+  },
+  "下载资源": {
+    "recognition": "OCR",
+    "next": [
+      "开始游戏",
+      "下载资源"
+    ],
+    "roi": [
+      859,
+      645,
+      78,
+      54
+    ],
+    "expected": [
+      "下载"
+    ]
+  },
+  "开始游戏": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "首页标志1",
+      "子任务_关闭公告",
+      "关闭周年弹窗",
+      "签到",
+      "开始游戏"
+    ],
+    "roi": [
+      580,
+      462,
+      121,
+      40
+    ],
+    "expected": [
+      "开始游戏"
+    ]
+  },
+  "签到": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "首页标志1",
+      "子任务_点击首页按钮",
+      "子任务_点击返回",
+      "子任务_获得物品",
+      "子任务_点击取消",
+      "子任务_关闭公告",
+      "签到"
+    ],
+    "roi": [
+      1053,
+      554,
+      211,
+      105
+    ],
+    "expected": [
+      "签到"
+    ]
+  },
+  "首页标志1": {
+    "recognition": "OCR",
+    "next": [
+      "子任务_点击首页按钮",
+      "子任务_点击返回",
+      "子任务_获得物品",
+      "子任务_点击取消",
+      "子任务_关闭公告",
+      "签到",
+      "首页标志2",
+      "首页标志1"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      885,
+      451,
+      240,
+      139
+    ],
+    "expected": [
+      "补给站"
+    ]
+  },
+  "首页标志2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "post_delay": 1000,
+    "roi": [
+      1127,
+      593,
+      119,
+      62
+    ],
+    "template": [
+      "StartUp/HomeFlag1.png"
+    ],
+    "expected": [
+      "出击"
+    ],
+    "target": [
+      620,
+      350,
+      20,
+      20
+    ]
+  },
+  "启动游戏": {
+    "action": "StartApp",
+    "is_sub": true,
+    "package": "com.megagame.crosscore/com.megagame.crosscore.extend.PhoneUtilActivity"
+  },
+  "关闭周年弹窗": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "roi": [
+      1143,
+      118,
+      36,
+      41
+    ],
+    "template": [
+      "StartUp/CloseOneYear.png"
+    ],
+    "green_mask": true
+  }
 }
